@@ -57,19 +57,26 @@
       padding-bottom: 0.3rem;
       margin-bottom: 0.8rem;
     }
-    section h3 {
-      margin: 0.8rem 0 0.3rem;
+    .project-item {
+      margin-bottom: 1.5rem;
+    }
+    .project-item h3 {
+      margin-bottom: 0.3rem;
+    }
+    .project-item p {
+      margin: 0.5rem 0;
+    }
+    .project-item a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .project-item a:hover {
+      text-decoration: underline;
     }
     ul {
       list-style: disc inside;
       margin: 0.5rem 0;
       padding-left: 1rem;
-    }
-    a {
-      color: #333;
-    }
-    a:hover {
-      text-decoration: underline;
     }
     footer {
       background: #333;
@@ -86,7 +93,7 @@
     <div class="container">
       <h1>Ehsan Aghapour</h1>
       <p>Edge AI Researcher and Embedded Systems Engineer</p>
-      <p>Amsterdam, NL &nbsp;|&nbsp; +31 61 875 1198 &nbsp;|&nbsp; 
+      <p>Amsterdam, NL &nbsp;|&nbsp; +31 61 875 1198 &nbsp;|&nbsp;
         <a href="mailto:aghapour.ehsan17@gmail.com" style="color: #fff;">aghapour.ehsan17@gmail.com</a>
       </p>
       <p>
@@ -229,44 +236,140 @@
     <!-- Selected Projects -->
     <section id="projects">
       <h2>Selected Projects</h2>
-      <h3>ARM-COUP Framework</h3>
-      <p>
-        Designed and implemented a framework for cooperative CPU, GPU, and NPU utilization to optimize resource design and efficiency for CNN inference on HMPSoCs.
-        <a href="https://github.com/Ehsan-aghapour/ARM-CO-UP" target="_blank">GitHub</a>
-      </p>
-      <h3>NPU Optimization</h3>
-      <p>
-        Developed a multi-objective genetic algorithm to optimize CPU-GPU-NPU design—balancing power efficiency, performance, and accuracy trade-offs on real ARM-based systems.
-        <a href="https://github.com/Ehsan-aghapour/PiQi" target="_blank">GitHub</a>
-      </p>
-      <h3>Performance Profiling</h3>
-      <p>
-        Implemented custom kernel modules for real-time profiling on smartphone platforms, capturing device states directly from the kernel.
-        <a href="https://github.com/Ehsan-aghapour/Gator/tree/master/Rockpi" target="_blank">GitHub</a>
-      </p>
-      <h3>Kernel-Level Power Management</h3>
-      <p>
-        Implemented kernel-level drivers for real-time power management of CPU and GPU cores via system-level interfaces.
-        <a href="https://github.com/Ehsan-aghapour/rockpi_kernel4/tree/my_branch" target="_blank">GitHub</a>
-      </p>
-      <h3>Deep Reinforcement Learning Power Manager</h3>
-      <p>
-        Trained a DRL power manager and deployed it on the NPU of an Android platform to optimize energy consumption while meeting gaming performance requirements.
-        <a href="https://github.com/Ehsan-aghapour/rockpi_npu.git" target="_blank">GitHub</a>
-      </p>
-      <p><em>[For the full list of projects, please see the Appendix below.]</em></p>
-    </section>
-
-    <!-- Selected Publications -->
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul>
-        <li><strong>2024:</strong> <em>PiQi: Partially Quantized DNN Inference on HMPSoCs</em> — ACM/IEEE ISLPED.</li>
-        <li><strong>2024:</strong> <em>ARM-CO-UP Framework: ARM Co-Operative Utilization of Processors</em> — ACM TODAES.</li>
-        <li><strong>2023:</strong> <em>PELSI: Power-Efficient Layer-Switched Inference</em> — Nominated for Best Paper Award at IEEE RTCSA.</li>
-        <li><strong>2023:</strong> <em>Pipelined CNN Inference on Heterogeneous Multi-Processor SoC</em> — In <em>Embedded Machine Learning for Cyber-Physical, IoT, and Edge Computing</em> (Springer Nature).</li>
-        <li><strong>2022:</strong> <em>CPU-GPU Layer-Switched Low Latency CNN Inference</em> — Euromicro DSD.</li>
-      </ul>
+      
+      <!-- Project 1 -->
+      <article class="project-item">
+        <h3>ARM-COUP Framework</h3>
+        <p>
+          Designed and implemented a framework that enables cooperative utilization of CPU, GPU, and NPU resources to optimize CNN inference on heterogeneous multi-processor systems. The approach features automated model slicing and coordinated execution validated on real embedded platforms.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/ARM-CO-UP" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 2 -->
+      <article class="project-item">
+        <h3>NPU Optimization</h3>
+        <p>
+          Developed a multi-objective genetic algorithm to optimize the integration of CPU, GPU, and NPU. This solution balances power efficiency, performance, and accuracy trade-offs on real ARM-based systems to enhance CNN inference.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/PiQi" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 3 -->
+      <article class="project-item">
+        <h3>Low-Latency &amp; Power-Efficient DL Inference</h3>
+        <p>
+          Designed and validated deep learning inference pipelines that achieve low latency and high energy efficiency on heterogeneous multi-processor systems. This work leverages CPU-GPU coordination and advanced scheduling techniques to meet strict timing requirements.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/ARMCL-pipe-all/tree/CPU-GPU-LW" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 4 -->
+      <article class="project-item">
+        <h3>CPU-GPU-NPU Inference Pipeline</h3>
+        <p>
+          Developed an integrated inference pipeline that seamlessly combines CPU, GPU, and NPU resources to maximize throughput and energy efficiency. The pipeline ensures smooth hardware-software integration across heterogeneous processors.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/PipeAll-GA" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 5 -->
+      <article class="project-item">
+        <h3>DL Layer Characterization</h3>
+        <p>
+          Profiled deep learning layers on HMPSoCs to capture performance, power, and accuracy (including quantization effects) metrics. These insights help inform design trade-offs for deploying efficient AI applications.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/CO-UP-Profiling" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 6 -->
+      <article class="project-item">
+        <h3>DL-based Inference Predictor</h3>
+        <p>
+          Developed deep learning models to predict inference throughput, power, and accuracy. These predictors support design space exploration tasks such as model slicing, mapping, and DVFS-based scheduling.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/YoloV3-QE/tree/master/Quantization/PredictionModel/v2" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 7 -->
+      <article class="project-item">
+        <h3>Performance Profiling</h3>
+        <p>
+          Implemented custom kernel modules for real-time profiling on smartphone platforms, capturing detailed device states directly from the kernel. This setup facilitates dynamic performance scaling in embedded systems.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/Gator/tree/master/Rockpi" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 8 -->
+      <article class="project-item">
+        <h3>Kernel-Level Power Management</h3>
+        <p>
+          Developed kernel-level drivers for real-time power management of CPU and GPU cores. The solution leverages system-level interfaces to achieve efficient energy management on embedded platforms.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/rockpi_kernel4/tree/my_branch" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 9 -->
+      <article class="project-item">
+        <h3>Deep Reinforcement Learning Power Manager</h3>
+        <p>
+          Trained a deep reinforcement learning model and deployed it on the NPU of an Android platform to dynamically manage power consumption while meeting performance targets for mobile gaming.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/rockpi_npu.git" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Additional Projects -->
+      
+      <!-- Project 10 -->
+      <article class="project-item">
+        <h3>Demo Governor Kernel Module</h3>
+        <p>
+          Developed a demonstration kernel module that simulates a governor for dynamic power and performance management. This project provides insights into kernel-level resource control and scheduling mechanisms.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/Governor_Demo" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 11 -->
+      <article class="project-item">
+        <h3>Power Meter</h3>
+        <p>
+          Designed and implemented a power meter tool to measure real-time energy consumption in embedded systems. The instrument aids in evaluating performance and efficiency across various hardware platforms.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/Power_meter" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 12 -->
+      <article class="project-item">
+        <h3>Object Detection (YOLO) Accuracy Characterization with Partial Quantization</h3>
+        <p>
+          Evaluated the impact of partial quantization on YOLO-based object detection accuracy. This study offers detailed insights into the trade-offs between full-precision and quantized models.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/YoloV3-QE" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      <!-- Project 13 -->
+      <article class="project-item">
+        <h3>Object Classification NPU Quantization Accuracy Characterization</h3>
+        <p>
+          Assessed the accuracy of object classification on NPUs under quantization, comparing quantized implementations against fully precise models. The evaluation highlights trade-offs in efficiency and accuracy.
+          <br>
+          <a href="https://github.com/Ehsan-aghapour/Eval-CNN-Accuracy" target="_blank">View on GitHub</a>
+        </p>
+      </article>
+      
+      
     </section>
 
     <!-- Course Projects -->
@@ -274,28 +377,29 @@
       <h2>Course Projects</h2>
       <h3>Web-Based Chatting Application</h3>
       <p>
-        Created a real-time chat application using HTML, CSS, JavaScript, and PHP/MySQL for multi-user messaging.
+        Created a real-time chat application using web technologies (HTML, CSS, JavaScript, PHP/MySQL), enabling multi-user messaging.
       </p>
       <h3>Proxy Server (Computer Networks)</h3>
       <p>
-        Implemented a simple HTTP proxy server for caching and request forwarding to enhance web performance and security.
+        Implemented a simple HTTP proxy server that handles caching and request forwarding, enhancing both web performance and security.
       </p>
       <h3>Computer Vision by Learning 2025 (Hands-on)</h3>
       <p>
-        Implemented MLP, CNN, and Vision Transformer architectures with data augmentation, batch normalization, dropout, and SimCLR. 
-        <a href="https://github.com/Ehsan-aghapour/asci_cbl_practicals" target="_blank">GitHub</a>
+        Implemented MLP, CNN, and Vision Transformer architectures with data augmentation, batch normalization, dropout, and SimCLR. Analyzed model performance and limitations.
+        <br>
+        <a href="https://github.com/Ehsan-aghapour/asci_cbl_practicals" target="_blank">View on GitHub</a>
       </p>
       <h3>Deep Learning Summer School (Hands-on)</h3>
       <p>
-        Developed an RNN-based image recognition system in TensorFlow using sequence modeling techniques.
+        Developed an RNN-based image recognition system in TensorFlow, applying sequence modeling techniques for vision tasks.
       </p>
       <h3>Movie Recommendation System (C++)</h3>
       <p>
-        Implemented a collaborative filtering movie recommendation engine with user/item-based rating predictions.
+        Implemented a collaborative-filtering movie recommendation engine with user/item-based rating predictions, showcasing advanced data structures and algorithms.
       </p>
       <h3>Queue Management System (ATmega)</h3>
       <p>
-        Developed a real-time queue management system using an ATmega microcontroller in embedded C.
+        Developed a real-time queue management system using an ATmega microcontroller programmed in embedded C.
       </p>
       <h3>Gate-Level Fault Simulation (C++)</h3>
       <p>
@@ -303,7 +407,7 @@
       </p>
       <h3>Detect &amp; Fix Head-of-Line Blocking in BookSim</h3>
       <p>
-        Identified and resolved head-of-line blocking issues in the BookSim simulator to improve network throughput.
+        Identified and resolved head-of-line blocking issues in the BookSim simulator to improve interconnection network throughput.
       </p>
     </section>
 
@@ -324,4 +428,3 @@
   </footer>
 </body>
 </html>
-
